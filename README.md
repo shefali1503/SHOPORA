@@ -1,6 +1,7 @@
 # Shopora
 
 A modern full-stack e-commerce clothing store built with React, Express, and MongoDB, offering curated collections for Men, Women, and Kids.
+Completed with the frontend and responsiveness
 
 ## Tech Stack
 - **Frontend:** React
