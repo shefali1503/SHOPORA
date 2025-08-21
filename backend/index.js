@@ -121,6 +121,8 @@ app.get('/allproducts',async(req,res)=>{
     res.send(products);
 })
 
+//Schema creating for User model
+
 
 app.listen(port,(error)=>{
     if(!error){
