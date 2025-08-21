@@ -5,7 +5,13 @@ import star_dull_icon from '../Assets/star_dull_icon.png'
 import { ShopContext } from '../../Context/ShopContext'
 const ProductDisplay = (props) => {
     const { product } = props;
-    const {addToCart} = useContext(ShopContext);
+    const { addToCart } = useContext(ShopContext);
+
+    // 🔒 Prevent crash if product is not yet loaded
+    if (!product) {
+        return <div>Loading product...</div>;
+    }
+
     return (
         <div className='productdisplay'>
             <div className="productdisplay-left">
@@ -50,7 +56,7 @@ const ProductDisplay = (props) => {
                         <div>XXL</div>
                     </div>
                 </div>
-                <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+                <button onClick={() => { addToCart(product.id) }}>ADD TO CART</button>
                 <p className='productdisplay-right-category'><span>Category :</span>Women , T-Shirt , Crop Top</p>
                 <p className='productdisplay-right-category'><span>Tags :</span>Modern , Latest</p>
             </div>
